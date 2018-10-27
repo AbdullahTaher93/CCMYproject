@@ -1,8 +1,8 @@
-##Description
+﻿##Description
 
 
 we know there are many persons are looking for a job and they face difficult to find a job 
-what they want Conversely there are many companies� managers are looking for a suitable person
+what they want Conversely there are many companies’ managers are looking for a suitable person
 to work in their companies created as a social media don't provide a special relation between 
 companies and jobless so, my project provides a special relation between companies and people The
 objective of this project, create Employment website with user interface which will enable them to
@@ -14,9 +14,21 @@ his skills in his profile.
 
 
 
-An architecture based on microservices will be used
-1)Html,CSS.Javascript 
-2)ASP.net
-3)SQLserver 
+#The top-level structure of the program:
+ Home Page
+1 Administrator
+      1.1 Manage Jobs
+       1.2 Manage Searchers
+       1.3 Manage Providers
+2 Provider
+     2.1 Add New Jobs
+     2.2   Add Jobs' Skills
+     2.3   Profile
+     2.4 See Searcher
+3 Searcher
+    3.1 Add New Skills 
+    3.2 Profile
+    3.3 See Jobs
+I will use ASP.net as Back-end, Html, CSS, JavaScript as front-end and SQLServer to Handle data
 
 
