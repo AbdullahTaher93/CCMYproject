@@ -1,4 +1,4 @@
-﻿## Description
+﻿# Description
 
 
 we know there are many persons are looking for a job and they face difficult to find a job 
@@ -10,11 +10,11 @@ browse, search, get the chance to work, and select the suitable work or employee
 For example: if someone is looking for a job just will do searching, the search result will be liking
 his skills in his profile.
 
-## Architecture
+# Architecture
 
 
 
-# The top-level structure of the program:
+## The top-level structure of the program:
  Home Page
 
 1 Administrator
