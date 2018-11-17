@@ -1,4 +1,4 @@
-
+﻿
 
 # Description
 
@@ -41,12 +41,11 @@ his skills in his profile.
     3.1 Add New Skills 
     3.2 Profile
     3.3 See Jobs
-I will use ASP.net as Back-end, Html, CSS, JavaScript as front-end and SQLServer to Handle data
+I will use Node js as Back-end, Html, CSS, JavaScript as front-end and MongoDB to Handle data
 
 
 
 
 
 
-## [ Cloud computing Exercises ](https://github.com/AbdullahTaher93/CC-Exercise)
 ## [My Project](https://abdullahtaher93.github.io/CCMYproject/)
