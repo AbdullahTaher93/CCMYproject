@@ -1,0 +1,26 @@
+{
+  "name": "webservice",
+  "version": "1.0.0",
+  "description": "small web service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "author": "Abdullah ALmusawi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "scripts": {
+	  "test": "mocha",
+	  "start": "node index.js"
+  },
+  
+    "status": "OK",
+    "ejemplo": { "ruta": "/ruta/parametro",
+                 "valor": "{JSON: devuelto}"
+               }
+ 
+ 
+}
