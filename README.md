@@ -1,6 +1,7 @@
 ﻿
 
-![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)
+[![Build Status](https://travis-ci.org/AbdullahTaher93/CCMYproject.svg?branch=master)](https://travis-ci.org/AbdullahTaher93/CCMYproject)
+
 
 # Description
 
