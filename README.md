@@ -1,5 +1,7 @@
 ﻿
 
+![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg)
+
 # Description
 
 
