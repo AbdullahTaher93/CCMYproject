@@ -4,5 +4,3 @@ node_js:
   - 11.1.0
 install:
   - npm install mocha
-script:
-  - npm test
