@@ -4,23 +4,18 @@
   "description": "small web service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "test": "mocha",
+    "start": "node index.js"
   },
   "author": "Abdullah ALmusawi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mocha": "^5.2.0"
   },
-  "scripts": {
-	  "test": "mocha",
-	  "start": "node index.js"
-  },
-  
-    "status": "OK",
-    "ejemplo": { "ruta": "/ruta/parametro",
-                 "valor": "{JSON: devuelto}"
-               }
- 
- 
+  "status": "OK",
+  "ejemplo": {
+    "ruta": "/ruta/parametro",
+    "valor": "{JSON: devuelto}"
+  }
 }
