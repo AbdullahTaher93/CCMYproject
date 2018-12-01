@@ -56,21 +56,29 @@ A RESTful API -- also referred to as a RESTful web service -- is based on repres
 
 now we can create a small web service by use Node js :
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/npm%20init.png)
+
+
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/npm%20--save%20inst.png)
 
 then we used get method of REST
 
-app.get("/", function (req, res) {
-        res.send( {"status":"OK","ejemplo":{"ruta":"/see_issues","valor":{"size":0}}} );
+-app.get("/", function (req, res) {
+        -res.send( {"status":"OK","ejemplo":{"ruta":"/see_issues",-"valor":{"size":0}}} );
 
 
 After that we can test our project with [travis](https://travis-ci.org)
+
+
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/trivas1.png)
+
+
 
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/trivas2.png)
 
 
- if it pass to test it will  deploy to [Heroku](https://Heroku.com) but befor that we must connect Github with Heroku 
+ if it pass The test it will  deploy to [Heroku](https://Heroku.com) but befor that we must connect Github with Heroku 
+
+
 
  ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/heroku.png) 
 
