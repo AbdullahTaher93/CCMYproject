@@ -19,6 +19,9 @@ his skills in his profile.
 
 In simple words, software architecture is the process of converting software characteristics such as flexibility, scalability, feasibility, reusability, and security into a structured solution that meets the technical and the business expectations. This definition leads us to ask about the characteristics of a software that can affect a software architecture design. There is a long list of characteristics which mainly represent the business or the operational requirements, in addition to the technical requirements.
 
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/cyc.png)
+
 ## The top-level structure of the program:
  Home Page
 

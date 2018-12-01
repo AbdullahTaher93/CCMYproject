@@ -19,6 +19,9 @@ his skills in his profile.
 
 In simple words, software architecture is the process of converting software characteristics such as flexibility, scalability, feasibility, reusability, and security into a structured solution that meets the technical and the business expectations. This definition leads us to ask about the characteristics of a software that can affect a software architecture design. There is a long list of characteristics which mainly represent the business or the operational requirements, in addition to the technical requirements.
 
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/cyc.png)
+
 ## The top-level structure of the program:
  Home Page
 
@@ -54,7 +57,9 @@ Right now the data is stored in this structure and managed by itself, in the fut
 A RESTful API is an application program interface [API](https://searchmicroservices.techtarget.com/definition/application-program-interface-API) that uses [HTTP](https://searchwindevelopment.techtarget.com/definition/HTTP) requests to GET, PUT, POST and DELETE data.
 A RESTful API -- also referred to as a RESTful web service -- is based on representational state transfer [REST](https://searchmicroservices.techtarget.com/definition/REST-representational-state-transfer) technology, an architectural style and approach to communications often used in [web services](https://searchmicroservices.techtarget.com/definition/Web-services-application-services) development.
 
-now we can create a small web service by use Node js :
+## now we can create a small web service by use Node js :
+
+
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/npm%20init.png)
 
 
