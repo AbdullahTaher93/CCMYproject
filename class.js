@@ -93,11 +93,9 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
 function deletdata(index){
   savedata.splice(index,1);
 }
-<<<<<<< HEAD
+
 function search(age){
-=======
-function serarch(age){
->>>>>>> dd0e6e26fd3a8514332437db259e6289d17c6142
+
    savedata.find(function(element) {
   if (element.age < age)
   console.log(element.name);
@@ -114,8 +112,6 @@ function serarch(age){
 
   }
 
-<<<<<<< HEAD
+
 module.exports={storeData,savedata,print,editdata,deletdata,search};
-=======
-module.exports={storeData,savedata,print,editdata,deletdata,serarch};
->>>>>>> dd0e6e26fd3a8514332437db259e6289d17c6142
+
