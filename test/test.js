@@ -62,15 +62,8 @@ describe( "API REST", function() {
       });
   });
   
-//serach test
-it('Get to /api/search', function(done){
-  request(app)
-    .get('/api')
-    .send({index:0})
-      .set('Accept', 'application/json')
-    .expect(200)
-    done();
-});
+
+
 
 
 });

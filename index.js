@@ -21,16 +21,7 @@ var express=require("express");
       res.send(200,"it printed on console");
        });
 
-    app.get('/api/search',(req,res)=>{
-      res.setHeader('Content-Type', 'text/html')
-      savedata.search(req.body.age);
-             
-
-      res.send(200,"it printed on console!!!");
-
-      res.send(200,"it printed on console");
-
-       });
+    
 
     
 
