@@ -10,6 +10,7 @@
   "author": "Abdullah ALmusawi",
   "license": "ISC",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "express": "^4.16.4",
     "mocha": "^5.2.0"
   },
@@ -17,5 +18,8 @@
   "ejemplo": {
     "ruta": "/ruta/parametro",
     "valor": "{JSON: devuelto}"
+  },
+  "devDependencies": {
+    "supertest": "^3.3.0"
   }
 }
