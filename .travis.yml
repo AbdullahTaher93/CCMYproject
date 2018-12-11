@@ -12,7 +12,6 @@ install:
 deploy:
   provider: heroku
   api_key:
-    
   strategy: git
   app: small-well-service
   on:

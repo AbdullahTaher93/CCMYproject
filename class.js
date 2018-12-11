@@ -91,7 +91,8 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
   }
 //delet a profile
 function deletdata(index){
-  savedata.splice(index,1);
+  var items=savedata.splice(index,1);
+  return items;
 }
 
 function search(age){
