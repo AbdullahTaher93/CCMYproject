@@ -14,7 +14,7 @@ describe( "API REST", function() {
     done();
   });
   
-
+//print all profiles on console
   it('Get to /api', function(done){
     request(app)
       .get('/api')
@@ -35,7 +35,7 @@ it('Post to /api', function(done){
         done();
       });
   });
-
+//edit
   it('put to /api', function(done){
     request(app)
       .put('/api')
@@ -63,8 +63,8 @@ it('Post to /api', function(done){
       });
   });
   
-
-  it('get to /api/search', function(done){
+//query 
+  it('query to /api/search', function(done){
     request(app)
       .get('/api/search')
       .send("age=25")

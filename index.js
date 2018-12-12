@@ -1,6 +1,6 @@
 var express=require("express");
     var app = express();
-    var body=require('body-parser');
+    var bodyParser=require('body-parser');
 
     var port = process.env.PORT || 8080;
 
@@ -8,13 +8,21 @@ var express=require("express");
     app.set('port', port);
     app.use(express.static(__dirname + '/public'));
     app.use(express.urlencoded());
-    app.use(body.urlencoded({extended:false}))
-    app.use(body.json())
+    app.use(bodyParser.json())
+    app.use(bodyParser.urlencoded({ extended: false }))
 
-    app.get('/',(req,res)=>{
-     
-      res.send( {"status":"OK","ejemplo":{"ruta":"/see_issues","valor":{"size":0}}} );
-       
+
+    app.get('/', function (req, res) {
+
+      var msg = {
+             "status": "OK",
+             "ejemplo": {
+                "ruta": "/issue/foo",
+                            "valor": { "msg" : "Not found" }
+               }
+           }
+      res.status(200);
+      res.send(msg);
     });
     
 
@@ -22,14 +30,14 @@ var express=require("express");
      
       savedata.print();
              
-      res.send(200,"it printed on console");
+      res.status(200).send("it printed on console");
        });
 
        app.get('/api/search',(req,res)=>{
        
           savedata.search(req.body.age);
          
-          res.send(200,'The name of these age are printed in console');
+          res.status(200).send('The name of these age are printed in console');
            
            });
     
@@ -40,14 +48,14 @@ var express=require("express");
       
             savedata.storeData(req.body.name,req.body.age,req.body.sex,req.body.email,req.body.phonenumber,req.body.skills,req.body.study);
            
-            res.send(200,req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
+            res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
              
              });
              app.put('/api',(req,res)=>{
              
               savedata.editdata(req.body.index,req.body.name,req.body.age,req.body.sex,req.body.email,req.body.phonenumber,req.body.skills,req.body.study);
            
-              res.send(200,req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
+              res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
                
                
                });
@@ -57,7 +65,7 @@ var express=require("express");
                
                 savedata.deletdata(req.body.index);
              
-                res.send(200,'this is profile has deleted!!!');
+                res.status(200).send('this is profile has deleted!!!');
                  
                  
                  });

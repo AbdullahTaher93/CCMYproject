@@ -1,18 +1,10 @@
-branches:
-  only:
-    - master
 language: node_js
 sudo: false
 node_js:
-  - node
+  - v11.1
 install:
   - npm install mocha
-  - npm install supertest
-  - npm install express
-deploy:
-  provider: heroku
-  api_key:
-  strategy: git
-  app: small-well-service
-  on:
-    repo: AbdullahTaher93/CCMYproject
+  - npm install
+  -travis_wait mvn install
+script:
+  - npm test
