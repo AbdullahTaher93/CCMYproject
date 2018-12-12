@@ -1,5 +1,5 @@
 var request = require('supertest');
-app=require("../index.js");
+var app=require("../index.js");
 var alldata=require("../class.js");
 assert = require('assert');
 
@@ -9,10 +9,11 @@ describe( "API REST", function() {
   it('main get, respond OK', function (done) {
   request(app)
     .get('/')
-    .expect('Content-Type', 'application/json; charset=utf-8')
+    .expect('Content-Type', 'application/json')
     .expect(200)
     done();
   });
+  
 
   it('Get to /api', function(done){
     request(app)
@@ -22,11 +23,11 @@ describe( "API REST", function() {
       done();
   });
 
-  it('Post to /api', function(done){
+it('Post to /api', function(done){
     request(app)
       .post('/api')
-      .send({name:'abdullah',age:'25',sex:'M',email:'AbdullahTaher@correo.ugr.es',phonenumber:0063,skills:'C1,C2,C3',study:'A1'})
-      .set('Accept', 'application/json')
+      .send("name=abdullah&age=25&sex=M&email=AbdullahTaher@correo.ugr.es&phonenumber=0063&skills=C1,C2,C3&study=A1")
+      
       
       .expect(200)
       .end(function(err, res) {
@@ -38,8 +39,8 @@ describe( "API REST", function() {
   it('put to /api', function(done){
     request(app)
       .put('/api')
-      .send({index:0,name:'abdullah',age:'26',sex:'M',email:'AbdullahTaher@correo.ugr.es',phonenumber:0063,skills:'C1,C2,C3',study:'A1'})
-      .set('Accept', 'application/json')
+      .send("index=0&name=ali&age=23&sex=M&email=AbdullahTaher@correo.ugr.es&phonenumber=0063&skills=C1,C2,C3&study=A1")
+   
       
       .expect(200)
       .end(function(err, res) {
@@ -49,11 +50,25 @@ describe( "API REST", function() {
   });
   
 
-  it('delet to /api', function(done){
+  it('delete to /api', function(done){
     request(app)
       .delete('/api')
-      .send({index:0})
-      .set('Accept', 'application/json')
+      .send("index=0")
+      
+      
+      .expect(200)
+      .end(function(err, res) {
+        if (err) return done(err);
+        done();
+      });
+  });
+  
+
+  it('get to /api/search', function(done){
+    request(app)
+      .get('/api/search')
+      .send("age=25")
+      
       
       .expect(200)
       .end(function(err, res) {
@@ -65,6 +80,9 @@ describe( "API REST", function() {
 
 
 
+ 
+
+  
 
 });
 

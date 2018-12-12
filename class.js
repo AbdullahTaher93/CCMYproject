@@ -89,7 +89,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
     savedata[index].setskills(skills);
     savedata[index].setstudy(study);
   }
-//delet a profile
+//delete a profile
 function deletdata(index){
   var items=savedata.splice(index,1);
   return items;
