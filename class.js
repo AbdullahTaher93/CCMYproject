@@ -2,6 +2,7 @@
 
 size=0;
 var savedata=[];
+var namesfilter=[];
 var data = {
     name:'',
     age:0,
@@ -76,7 +77,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
 
 
     savedata.push(clone);
-    size=savedata.length;
+    size=size+1;
      
   }
   //edit a profile
@@ -92,14 +93,21 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
 //delete a profile
 function deletdata(index){
   var items=savedata.splice(index,1);
+  size=size-1;
   return items;
 }
 
 function search(age){
 
+var si=0;
    savedata.find(function(element) {
-  if (element.age < age)
-  console.log(element.name);
+  if (element.age = age){
+  namesfilter[si]=element.name;
+  console.log(namesfilter[si]);
+  si=si+1;
+  }
+  return namesfilter;
+  
 });
 
 
@@ -114,5 +122,5 @@ function search(age){
   }
 
 
-module.exports={storeData,savedata,print,editdata,deletdata,search};
+module.exports={storeData,savedata,print,editdata,deletdata,search,namesfilter,size};
 

@@ -7,7 +7,7 @@ var express=require("express");
     var savedata=require("./class");
     app.set('port', port);
     app.use(express.static(__dirname + '/public'));
-    app.use(express.urlencoded());
+    
     app.use(bodyParser.json())
     app.use(bodyParser.urlencoded({ extended: false }))
 
