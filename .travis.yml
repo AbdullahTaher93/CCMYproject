@@ -5,6 +5,9 @@ node_js:
 install:
   - npm install mocha
   - npm install
-  
+
+  - travis_wait pip install scipy
+  - travis_wait pip install pysam
+  - pip install 
 script:
   - npm test
