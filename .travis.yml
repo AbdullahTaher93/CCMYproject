@@ -1,3 +1,4 @@
+dist: trusty
 language: node_js
 sudo: false
 node_js:
@@ -6,8 +7,11 @@ install:
   - npm install mocha
   - npm install
 
-  - travis_wait pip install scipy
-  - travis_wait pip install pysam
-  - pip install 
+ before_script:
+  - cd $TRAVIS_BUILD_DIR
+  - composer install
+
 script:
+  - $TRAVIS_BUILD_DIR/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+  - $TRAVIS_BUILD_DIR/bin/phpcs -p --report=full $TRAVIS_BUILD_DIR/sites/all/modules/custom
   - npm test
