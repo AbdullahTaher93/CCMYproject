@@ -6,7 +6,6 @@ install:
   - npm install mocha
   - npm install
 
- - npm install supertest
-  - npm install express
+
 script:
   - npm test
