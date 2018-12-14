@@ -1,19 +1,12 @@
-
 language: node_js
-dist: trusty
 sudo: false
 node_js:
   - v11
 install:
   - npm install mocha
   - npm install
-- npm install supertest
-  - npm install express
- before_script:
-  - cd $TRAVIS_BUILD_DIR
-  - composer install
 
+ - npm install supertest
+  - npm install express
 script:
-  - $TRAVIS_BUILD_DIR/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
-  - $TRAVIS_BUILD_DIR/bin/phpcs -p --report=full $TRAVIS_BUILD_DIR/sites/all/modules/custom
   - npm test
