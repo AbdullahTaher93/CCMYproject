@@ -1,11 +1,9 @@
 language: node_js
-sudo: false
 node_js:
-  - v11
-install:
-  - npm install mocha
-  - npm install
-
-
-script:
-  - npm test
+  - "node"
+before_install:
+    - npm install mocha -g
+    - npm install mocha --save-dev
+    - npm install --save-dev supertest
+after_success: 
+    - 'mocha probar.js'
