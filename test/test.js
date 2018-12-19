@@ -120,8 +120,7 @@ describe(' profile class test', function() {
 	});
 
 });
- 
-console.log("looping")
+
   
 
 
