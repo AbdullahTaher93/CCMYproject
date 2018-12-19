@@ -15,8 +15,8 @@ describe( "API REST", function() {
 			.expect(function(res){
 				if( res.body.status != "OK" ) throw new Error ("The service is not OK");
 			})
-			.expect(200,done);
-
+			.expect(200);
+      done();
 	});
   
 //print all profiles on console
@@ -32,16 +32,16 @@ it('Post to /api', function(done){
     request(app)
       .post('/api')
       .send("name=abdullah&age=25&sex=M&email=AbdullahTaher@correo.ugr.es&phonenumber=0063&skills=C1,C2,C3&study=A1")
-      .expect(200,done);
-      
+      .expect(200);
+      done();
   });
 //edit
   it('put to /api', function(done){
     request(app)
       .put('/api')
       .send("index=0&name=ali&age=23&sex=M&email=AbdullahTaher@correo.ugr.es&phonenumber=0063&skills=C1,C2,C3&study=A1")
-     .expect(200,done);
-      
+     .expect(200);
+     done();
   });
 
   
@@ -52,7 +52,7 @@ it('Post to /api', function(done){
       .send("index=0")
       
       
-      .expect(200)
+      .expect(200) 
       .end(function(err, res) {
         if (err) return done(err);
         done();
@@ -72,7 +72,7 @@ it('Post to /api', function(done){
         done();
       });
   });
-  
+});
 //==================== profile class test ====================
 
 describe(' profile class test', function() {
@@ -121,10 +121,10 @@ describe(' profile class test', function() {
 
 });
  
-
+console.log("looping")
   
 
-});
+
 
 
 

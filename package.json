@@ -11,8 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bunyan": "^1.8.12",
-    "express": "^4.16.4",
-    "mocha": "^5.2.0"
+    "express": "^4.16.4"
   },
   "status": "OK",
   "ejemplo": {
@@ -20,6 +19,7 @@
     "valor": "{JSON: devuelto}"
   },
   "devDependencies": {
+    "mocha": "^5.2.0",
     "supertest": "^3.3.0"
   }
 }

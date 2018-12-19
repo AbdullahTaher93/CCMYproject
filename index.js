@@ -23,6 +23,7 @@ var express=require("express");
            }
       res.status(200);
       res.send(msg);
+      console.log('done server')
     });
     
 
@@ -51,7 +52,8 @@ var express=require("express");
             res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
              
              });
-             app.put('/api',(req,res)=>{
+
+          app.put('/api',(req,res)=>{
              
               savedata.editdata(req.body.index,req.body.name,req.body.age,req.body.sex,req.body.email,req.body.phonenumber,req.body.skills,req.body.study);
            
@@ -67,7 +69,7 @@ var express=require("express");
              
                 res.status(200).send('this is profile has deleted!!!');
                  
-                 
+                
                  });
             
      
