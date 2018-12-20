@@ -4,7 +4,7 @@
   "description": "small web service",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --exit",
     "start": "node index.js"
   },
   "author": "Abdullah ALmusawi",

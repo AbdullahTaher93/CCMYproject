@@ -13,15 +13,17 @@ var express=require("express");
 
 
     app.get('/', function (req, res) {
-      res.setHeader('Content-Type', 'applicaton/json')
-      var output={
-                   "status": "OK",
-                   "ejemplo": { "ruta": "/data",
-                                "valor": { "PositionS stored ": size }
-                              }
-                  }
-      log.info(output);
-      res.send(output);
+
+      var msg = {
+             "status": "OK",
+             "ejemplo": {
+                "ruta": "/issue/foo",
+                            "valor": { "msg" : "Not found" }
+               }
+           }
+      res.status(200);
+      res.send(msg);
+      console.log('done server')
     });
     
 
