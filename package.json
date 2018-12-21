@@ -10,7 +10,9 @@
   "author": "Abdullah ALmusawi",
   "license": "ISC",
   "dependencies": {
-    "bunyan": "^1.8.12"
+    "bunyan": "^1.8.12",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0"
   },
   "status": "OK",
   "ejemplo": {
