@@ -1,7 +1,7 @@
 ---
 - hosts: all
   user: AbdullahTaher
-  password: AbdullahTaher112233
+  Host_pass: AbdullahTaher112233
   
   vars:
     - project_path: /home/AbdullahTaher/projects
