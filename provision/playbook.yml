@@ -1,7 +1,8 @@
 ---
 - hosts: all
   user: AbdullahTaher
-  Host_pass:AbdullahTaher112233
+  password: AbdullahTaher112233
+  
   vars:
     - project_path: /home/AbdullahTaher/projects
     - install_pack: ['nodejs','npm','git']
