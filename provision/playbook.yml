@@ -7,7 +7,7 @@
     - project_path: /home/AbdullahTaher/projects
     - install_pack: ["nodejs","npm","git"]
   tasks:
-  - name: install "{{install_pack}}"
+  - name: install "{{ install_pack }}"
       become: yes
       become_user: root
       apt:
