@@ -6,8 +6,7 @@
     project_path: /home/Abdullah/myproject
   tasks:
     - name: Crear directorio
-     become: true
-      become_method: sudo
+     
       file:
         dest={{ project_path }}
         mode=0755
