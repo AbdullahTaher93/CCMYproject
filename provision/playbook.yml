@@ -3,7 +3,7 @@
   user: AbdullahTaher
  
   vars:
-    project_path: ~
+    project_path: /~
   tasks:
 
     - name: Crear directorio
