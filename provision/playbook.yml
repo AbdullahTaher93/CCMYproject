@@ -1,12 +1,13 @@
 ---
 - hosts: all
   user: AbdullahTaher
-  gather_facts: false
+  ssh_pass: AbdullahTaher112233
   vars:
     project_path: /home/Abdullah/myproject
   tasks:
     - name: Crear directorio
-     
+     become: true
+      become_method: sudo
       file:
         dest={{ project_path }}
         mode=0755
