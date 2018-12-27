@@ -3,11 +3,13 @@
   user: AbdullahTaher
  
   vars:
-    project_path: /home/Abdullah/myproject
+    project_path: ~
   tasks:
+
     - name: Crear directorio
      
       file:
+
         dest={{ project_path }}
         mode=0755
         recurse=yes
