@@ -3,17 +3,10 @@
   user: AbdullahTaher
  
   vars:
-    project_path: /~
+    project_path: /home/Abdullah
   tasks:
-
-    - name: Crear directorio
-     
-      file:
-
-        dest={{ project_path }}
-        mode=0755
-        recurse=yes
-        state=directory
+  
+    
     - name: Clonar el repositorio
       git:
         repo: https://github.com/AbdullahTaher93/CCMYproject.git
