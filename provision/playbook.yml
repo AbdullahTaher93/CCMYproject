@@ -11,10 +11,11 @@
       become: yes
       become_user: root
       apt:
-        name: "{{ packages }}"
+        name: "{{ install_pack }}"
         state: present
 
     - name: Create project location
+      become_method: sudo
       file:
         path: "{{ project_path }}"
         state: directory
