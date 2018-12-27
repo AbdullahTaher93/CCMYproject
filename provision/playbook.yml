@@ -1,7 +1,7 @@
 ---
 - hosts: all
   user: AbdullahTaher
-host_pass: AbdullahTaher112233
+
   vars:
     project_path: /home/Abdullah/myproject
   tasks:
