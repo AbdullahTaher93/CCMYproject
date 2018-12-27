@@ -1,7 +1,7 @@
 ---
 - hosts: all
   user: AbdullahTaher
-
+  gather_facts: false
   vars:
     project_path: /home/Abdullah/myproject
   tasks:
