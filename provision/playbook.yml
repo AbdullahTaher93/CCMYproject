@@ -4,12 +4,7 @@
   vars:
     project_path: /home/AbdullahTaher/project
   tasks:
-    - name: Mkdir
-      file:
-        dest={{ project_path }}
-        mode=0755
-        recurse=yes
-        state=directory
+    
     - name: clone RP
       git:
         repo: https://github.com/AbdullahTaher93/CCMYproject.git
