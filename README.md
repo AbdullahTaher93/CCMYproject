@@ -22,7 +22,7 @@ In simple words, software architecture is the process of converting software cha
 
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/cyc.png)
 
-## The top-level structure of the program:
+# The top-level structure of the program:
  Home Page
 
 1 Administrator
@@ -50,7 +50,7 @@ In simple words, software architecture is the process of converting software cha
 I will use Node js as Back-end, Html, CSS, JavaScript as front-end and MongoDB to Handle data
 
 
-## Deploy in PaaS
+#  Deploy in PaaS
 
 We have chosen as temporary PaaS, for the deployment of our application, Heroku. This PaaS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
 
@@ -60,3 +60,14 @@ All the information regarding this section and the microservice developed is in
 [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito2.md)
 
 Despliegue: https://small-well-service.herokuapp.com/
+
+
+# Provision
+
+Ansible has been used in the provisioning,The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 
+All the information about this milestone[This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito3.md)
+
+I have checked the supply of [javiercabrera184](https://github.com/javiercabrera184) in the following [This Document](https://github.com/javiercabrera184/ProyectoCC/blob/master/docs/Hito3.md)
+
+MV : 40.89.158.72
+
