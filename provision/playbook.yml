@@ -21,6 +21,8 @@
         pkg=npm state=present
     
     - name: Install npm
+       become: yes
+      become_method: sudo
       npm:
         path={{ project_path }}
 
