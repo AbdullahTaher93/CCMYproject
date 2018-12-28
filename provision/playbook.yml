@@ -27,7 +27,7 @@
         path={{ project_path }}
 
     - name: Install pm2
-      become: yes
+      
       become_method: sudo
       npm:
         name: pm2
