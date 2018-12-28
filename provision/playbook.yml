@@ -20,11 +20,7 @@
       apt:
         pkg=npm state=present
     
-    - name: Install npm
-       
-      become_method: sudo
-      npm:
-        path={{ project_path }}
+    
 
     - name: Install pm2
       become: yes
