@@ -8,9 +8,9 @@
   
     
     - name: Clonar el repositorio
-      
+      become: yes
       git:
-        become: yes
+        
         repo: https://github.com/AbdullahTaher93/CCMYproject.git
         dest: "{{ project_path }}"
           
