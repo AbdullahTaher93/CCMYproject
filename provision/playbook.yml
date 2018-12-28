@@ -5,13 +5,7 @@
   vars:
     project_path: /home/project/CCMYproject
   tasks:
-  - name: Mkdir
-     become: yes
-      file:
-        dest={{ project_path }}
-        mode=0755
-        recurse=yes
-        state=directory
+  
     
     - name: Clone my RP
       become: yes
