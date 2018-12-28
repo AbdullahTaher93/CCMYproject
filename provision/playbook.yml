@@ -21,13 +21,13 @@
         pkg=npm state=present
     
     - name: Install npm
-       become: yes
+       
       become_method: sudo
       npm:
         path={{ project_path }}
 
     - name: Install pm2
-      
+      become: yes
       become_method: sudo
       npm:
         name: pm2
