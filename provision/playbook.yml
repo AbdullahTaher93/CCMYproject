@@ -3,11 +3,17 @@
   user: AbdullahTaher
  
   vars:
-    project_path: /home/Abdullah
+    project_path: /home/project/CCMYproject
   tasks:
-  
+  - name: Mkdir
+     become: yes
+      file:
+        dest={{ project_path }}
+        mode=0755
+        recurse=yes
+        state=directory
     
-    - name: Clonar el repositorio
+    - name: Clone my RP
       become: yes
       git:
         
@@ -20,10 +26,10 @@
       apt:
         pkg=npm state=present
     
-    - name: Instala dependecias npm
+    - name: Install npm
       npm:
         path={{ project_path }}
-    - name: Instala pm2
+    - name: Install pm2
       become: true
       become_method: sudo
       npm:
