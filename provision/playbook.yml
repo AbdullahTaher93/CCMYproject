@@ -15,7 +15,7 @@
         dest: "{{ project_path }}"
           
     - name: Instalar npm
-      become: true
+      become: yes
       become_method: sudo
       apt:
         pkg=npm state=present
@@ -23,17 +23,18 @@
     - name: Install npm
       npm:
         path={{ project_path }}
+
     - name: Install pm2
-      become: true
+      become: yes
       become_method: sudo
       npm:
         name: pm2
         global: yes
-    - name: Elimina el proceso lanzado anteriormente
+    - name: delete pre RP 
       command: pm2 delete PR
       ignore_errors: yes
     - name: Redirigir puertos
-      become: true
+      become: yes
       become_method: sudo
       command: iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
     - name: Arrancar pm2
