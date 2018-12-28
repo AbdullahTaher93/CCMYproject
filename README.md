@@ -69,5 +69,5 @@ All the information about this milestone[This Document](https://github.com/Abdul
 
 I have checked the supply of [javiercabrera184](https://github.com/javiercabrera184) in the following [This Document](https://github.com/javiercabrera184/ProyectoCC/blob/master/docs/Hito3.md)
 
-MV2: 40.89.158.72
+MV: 40.89.158.72
 
