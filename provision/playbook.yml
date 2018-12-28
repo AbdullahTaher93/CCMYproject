@@ -8,10 +8,12 @@
   
     
     - name: Clonar el repositorio
-        become: true
+      
       git:
+        become: yes
         repo: https://github.com/AbdullahTaher93/CCMYproject.git
         dest: "{{ project_path }}"
+          
     - name: Instalar npm
       become: true
       become_method: sudo
