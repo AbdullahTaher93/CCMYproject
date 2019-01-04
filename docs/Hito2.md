@@ -24,8 +24,11 @@ A profile added where data objects stored.
 We put four functions:
 
        1-storeData : it provides to users save a new profile
+       
        2- editData: edit a value already stored in the profile.
+       
        3-deleteData: delete a profile.
+       
        4-search: it provides a query of users whose their ages less than Specific age 
           For example:The ages<25 years old..
 
