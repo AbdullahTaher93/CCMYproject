@@ -51,9 +51,9 @@ I will use Node js as Back-end, Html, CSS, JavaScript as front-end and MongoDB t
 
 #  Deploy in PaaS
 
-We have chosen as temporary PaaS, for the deployment of our application, Heroku. This PaaS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
+We have chosen as temporary PasS for the deployment of our application, Heroku: This PasS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
 
-As an integration service, Travis has been used. The reason for use is the same as that of Heroku: how easy it is to use. It is enough to include a file .travis.yml. To use it you have to link it with the github account.
+Travis has been used As an integration service . The reason for using it is:easy to use. It is enough to include a file .travis.yml. To use it you have to connect it with the github account.
 
 All the information regarding this section and the microservice developed is in
 [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito2.md)
