@@ -31,7 +31,7 @@ We put four functions:
 
 ## REST API
 
-  Our REST API has the following methods:
+Our REST API has the following methods:
 1- GET on "/": Return the status of the service.
 2- GET over "/api":return all the profiles of users.
 3- GET over "/api/search":return the profiles of users whose their ages less than Specific age .
