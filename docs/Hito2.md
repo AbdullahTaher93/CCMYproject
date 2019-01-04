@@ -32,12 +32,12 @@ We put four functions:
 ## REST API
 
   Our REST API has the following methods:
-  1- GET on "/": Return the status of the service.
-  2- GET over "/api":return all the profiles of users.
-  3- GET over "/api/search":return the profiles of users whose their ages less than Specific age .
-  4- POST on "/api": Add a new profile.
-  5- PUT on "/api": Edit an element stored in the profile,It's based on the position of the profile.
-  6- DELETE on "/api":remove a profile of users, It's based on index of profile.
+1- GET on "/": Return the status of the service.
+2- GET over "/api":return all the profiles of users.
+3- GET over "/api/search":return the profiles of users whose their ages less than Specific age .
+4- POST on "/api": Add a new profile.
+5- PUT on "/api": Edit an element stored in the profile,It's based on the position of the profile.
+6- DELETE on "/api":remove a profile of users, It's based on index of profile.
 
  This API in the future will be used from a web page.
 
