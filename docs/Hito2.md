@@ -33,7 +33,7 @@ We put four functions:
           For example:The ages<25 years old..
 
 ## REST API
- Our REST API has the following methods:
+ Our REST API has methods following:
 
      1- GET on "/": Return the status of the service.
 
