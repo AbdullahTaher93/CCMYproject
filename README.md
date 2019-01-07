@@ -1,4 +1,4 @@
-
+﻿
 
 [![Build Status](https://travis-ci.org/AbdullahTaher93/CCMYproject.svg?branch=master)](https://travis-ci.org/AbdullahTaher93/CCMYproject)
 
@@ -69,4 +69,14 @@ All the information about this milestone[This Document](https://github.com/Abdul
 I have checked the supply of [javiercabrera184](https://github.com/javiercabrera184) in the following [This Document](https://github.com/javiercabrera184/ProyectoCC/blob/master/docs/Hito3.md)
 
 MV: 40.89.158.72
+
+
+
+# Gathering
+
+In this part the create virtual machine the command line using the Azure CLI tool, The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 
+All the information about this milestone[This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito4.md)
+
+
+MV2: 40.89.153.174
 
