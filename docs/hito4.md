@@ -1,8 +1,7 @@
 # Milestone 4
 
 
-In this part the create virtual machine the command line using the Azure CLI tool, The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 
-
+In this part the create virtual machine the command line using the Azure CLI tool, The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 ....
 
 
 #### We used Cloud shell of portal azuer
