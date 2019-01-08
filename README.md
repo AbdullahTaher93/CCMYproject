@@ -74,7 +74,7 @@ MV: 40.89.158.72
 
 # Gathering
 
-In this part the create virtual machine the command line using the Azure CLI tool, The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 
+In this part we will create virtual machine by command line using the Azure CLI tool, The we will deploy our application on Azure in a virtual machine with Ubuntu Server 18.04 
 All the information about this milestone[This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito4.md)
 
 
