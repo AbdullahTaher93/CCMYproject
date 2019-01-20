@@ -68,12 +68,12 @@ We launched the playbook and the result is as follows:
         
          sudo port=80 npm start
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/Port80.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/port80.png)
 
 The result following:    http://40.89.158.72/
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/server.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/sever.png)
 
 
 
