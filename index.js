@@ -3,7 +3,7 @@ var express=require("express");
     var bodyParser=require('body-parser');
 
     
-    var port = process.env.PORT || 8080;
+    var port = process.env.PORT || 3000;
 
     var savedata=require("./class");
     app.set('port', port);
@@ -19,7 +19,7 @@ var express=require("express");
              "status": "OK",
              "ejemplo": {
                 "ruta": "/issue/foo",
-                            "valor": { "msg" : "Not found" }
+                            "valor": { "msg" : "Abdullah Form Spain" }
                }
            }
       res.status(200);
@@ -81,7 +81,7 @@ var express=require("express");
   
   app.listen(port, function () {
 
-    console.log('Example app listening on port 8080!');
+    console.log('Example app listening on port 3000!');
 
   });
 module.exports=app;
