@@ -8,7 +8,7 @@ install:
   - npm install express --save
 
  services:
-  - mongodb
+        - mongodb
 
 script:
   - npm test

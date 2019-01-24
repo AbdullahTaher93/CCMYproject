@@ -1,3 +1,4 @@
+//using mongodb
 var express=require("express");
 var MongoClient=require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/";
@@ -8,7 +9,7 @@ MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here 
     dbase.createCollection("profiles", { useNewUrlParser: true },function(err, res) {
         if (err) throw err;
         console.log("Collection created!");
-        db.close();   //close method has also been moved to client obj
+        db.close();   //closed method has also been moved to client obj
     });
 });
         
