@@ -1,3 +1,10 @@
+var MongoClient=require("mongodb").MongoClient;
+var url = "mongodb://localhost:27017/";
+
+
+
+
+
 
 
 size=0;
@@ -77,6 +84,34 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
 
 
     savedata.push(clone);
+
+    MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
+      if (err) throw err;
+      
+      var dbase = db.db("persons"); //here
+      var json;
+      
+        
+        
+           json={
+            ID:size,
+            name:name,
+            age:age,
+            sex:sex,
+            email:email,
+            phonenumber:phonenumber,
+            skills:skills,
+            study:study
+            
+
+          };
+     
+      dbase.collection("profiles").insertOne(json,function(err, res){
+          if (err) throw err;
+          console.log("profile created!");
+          db.close();   //close method has also been moved to client obj
+      });
+  });
     size=size+1;
      
   }
@@ -92,8 +127,25 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
   }
 //delete a profile
 function deletdata(index){
-  var items=savedata.splice(index,1);
-  size=size-1;
+  
+  MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
+    if (err) throw err;
+    
+    var dbase = db.db("persons"); //here
+    
+    
+      var query={ID:index};
+      
+        
+    dbase.collection("profiles").deleteOne(query,function(err, res){
+        if (err) throw err;
+        console.log("profile deleted!");
+        db.close();   //close method has also been moved to client obj
+    });
+});
+
+
+var items=savedata.splice(index,1);
   return items;
 }
 
@@ -111,7 +163,32 @@ var si=0;
 });
 
 
+
 }
+
+
+function search1(age){
+
+  MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
+    if (err) throw err;
+ 
+    var dbase = db.db("persons"); //here
+    
+    
+      var query={age:age};
+      
+        
+    dbase.collection("profiles").find().sort(query).toArray(function(err, res){
+        if (err) throw err;
+        console.log(" searching!");
+        db.close();   //close method has also been moved to client obj
+    });
+});
+  
+  
+  
+  }
+  
 
 //print all fprofiles in Console.....
   function print(){
