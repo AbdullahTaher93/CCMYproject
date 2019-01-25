@@ -102,7 +102,7 @@ its configuration:
    3. Authentication:password.
    4. user : AbdullahTaher
    5. Ip address: static
-   6. Open ports: SSH (22) and HTTP (80).
+   6. Open ports: HTTP (80).
 
    We used Ubuntu Server 18.04 operating system,because it is the latest version of Ubuntu Server and because it brings NodeJS already.
 
