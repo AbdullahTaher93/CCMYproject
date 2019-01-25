@@ -11,7 +11,5 @@ az group create --name hito4 --location francecentral
 az network nsg create --resource-group hito4 --location francecentral --name networks
 # We will open port 80 
 az network nsg rule create --resource-group hito4 --nsg-name networks --name http80 --protocol tcp --priority 800 --destination-port-range 80 --access allow
-# We enable open port 22
-az network nsg rule create --resource-group hito4 --nsg-name networks --name http22 --protocol tcp --priority 799 --destination-port-range 22 --access allow
 # We will create the virtual machine with the group of resources created previously.
 az vm create --resource-group hito4 --name Myproject --image Canonical: UbuntuServer: 18.04-LTS: latest --admin-username abdullahtaher --admin-password mypassword --public-ip-address-allocation static - nsg networks

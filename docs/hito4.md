@@ -1,8 +1,42 @@
 # Milestone 4
 
 
-In this part the create virtual machine the command line using the Azure CLI tool, The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 ....
+In this part the create virtual machine the command line using the Azure CLI tool, The application has been deployed in Azure in a virtual machine with Ubuntu Server 18.04 ,and we used Mongodb in our app  ....
 
+
+#### In this part we used Mongodb in Our App..
+
+  first: we need connect our app with Mongodb but before that we should install mongodb in our app with this line:
+
+    npm install mongodb --save
+
+now we can connect mongo with app by this lines:
+
+    var MongoClient=require("mongodb").MongoClient;
+
+    var url = "mongodb://localhost:27017/";
+
+    MongoClient.connect(url, { useNewUrlParser: true },function(err,........
+
+second: we used 3 method for dealing with mongodb
+ 
+ * add a new profile by this line:
+
+           db.collection("profiles").insertOne() 
+
+* remove a profile by this line:
+
+    
+        query={ID:index};*
+        db.collection("profiles").deleteOne(query)
+
+* search about a profile by this line:
+
+        query={ID:index};
+        db.collection("profiles").find().sort(query).toArray()
+
+
+## Now we can create new VM for deploying our App
 
 #### We used Cloud shell of portal azuer
 
@@ -61,7 +95,16 @@ then, we can create and run  our virtual machine we indicate image, user, static
 
      az vm create --resource-group hito4 --name MyProject --image Canonical:UbuntuServer:18.04-LTS:latest --admin-username abdullahtaher --admin-password mypassword --public-ip-address-allocation static --nsg networks
 
+its configuration:
+   
+   1. OS: Ubuntu Server 18.04 
+   2. Region: France Central.
+   3. Authentication:password.
+   4. user : AbdullahTaher
+   5. Ip address: static
+   6. Open ports: SSH (22) and HTTP (80).
 
+   We used Ubuntu Server 18.04 operating system,because it is the latest version of Ubuntu Server and because it brings NodeJS already.
 
 finally, now we can deploy our project on the new our virtual machine we can do that a same way as in the [previous milestone](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito3.md) 
 
