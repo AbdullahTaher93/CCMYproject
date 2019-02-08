@@ -80,3 +80,15 @@ All the information about this milestone[This Document](https://github.com/Abdul
 
 MV2: 40.89.153.174
 
+
+
+# Orchestration
+
+
+The orchestration of the virtual machine was performed using the Vagrant orchestration tool,All the information to this milestone is in [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito5.md)
+
+and [this Video](https://azure.microsoft.com/es-es/resources/videos/azure-virtual-machine-creation-and-set-up-using-vagrant-with-corey-fowler/) help me to deal with vagrant.
+
+
+Despliegue Vagrant: 52.143.168.220
+
