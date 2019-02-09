@@ -79,7 +79,7 @@ now we can check the Datebase on Postman:
 
 3- delete a profile with Delete request:
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/postman2.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/postman3.png)
 
 
 
