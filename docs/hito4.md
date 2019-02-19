@@ -110,6 +110,7 @@ its configuration:
    5. Ip address: static
    6. ports: HTTP (80).
 
+
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/debiancfg.png)
 
 ## Why Debian?!
