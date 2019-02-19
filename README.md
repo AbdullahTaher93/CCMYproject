@@ -74,7 +74,7 @@ MV: 40.89.158.72
 
 # Gathering
 
-In this part we will create virtual machine by command line using the Azure CLI tool, The we will deploy our application on Azure in a virtual machine with Debian 9  as os,and we used Mongodb in our app 
+In this part we will create virtual machine by command line using the Azure CLI tool, The we will deploy our application on Azure in a virtual machine with Debian 9  as os, and we used Mongodb in our app 
 All the information about this milestone[This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito4.md)
 
 

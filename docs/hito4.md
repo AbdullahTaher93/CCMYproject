@@ -86,7 +86,7 @@ Then we should open Port 80 with command:
 
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/runVMcli.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/createnetwork2.png)
 
 
 
@@ -97,7 +97,7 @@ Next, we can create and run  our virtual machine, we are going to indicate image
 
      az vm create --resource-group hito4resend --name Myproject --image credativ:Debian:9:latest --admin-username abdullahtaher --admin-password mypassword --public-ip-address-allocation static -- nsg networks
 
-   ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/createnetwork2.png)
+   ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/runVMcli.png)
 
 
 
