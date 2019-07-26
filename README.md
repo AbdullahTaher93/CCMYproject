@@ -6,47 +6,19 @@
 # Description
 
 
-We know there are many persons are looking for a job and they face difficult to find a job, 
-What they want,Conversely There are many companies’ managers are looking for a suitable person
-For working in their companies, my project provides a special relation between companies and people 
-The objective is create Employment website with user interface which will enable them to
-Browse, search, get the chance to work, and select the suitable works. 
-For example: If someone wants looking for a job just he will search via our App,Then the search result will
-be as his skills in his profile.
+We know there are many persons are looking for a job and they face difficult to find a job  What they want,Conversely There are many companies’ managers are looking for a suitable person For working in their companies, my project provides a special relation between companies and people The objective is create Employment App with user interface which will allow them to Browse, search, get the chance to work, and select the suitable works. For example: If someone wants looking for a job just he will search via our App,Then the search result will be as his skills in his profile.
 
 # Architecture
 
-In simple words, software architecture is the process of converting software characteristics such as flexibility, scalability, feasibility, reusability, and security into a structured solution that meets the technical and the business expectations. This definition leads us to ask about the characteristics of a software that can affect a software architecture design. There is a long list of characteristics which mainly represent the business or the operational requirements, in addition to the technical requirements.
+The system is formed by an architecture based on microservices. It has a cloud service in which the data is stored, the database system will be a NoSql database in (MongoDB), Our system has a Login and signup for admins and users,From this the users can also view all data that stored in DB on the cloud, they can add, edit or delete featuers to/from their profiles, The system also has a REST API which can be used through a web page to do requesting (Get, post, Put, and delete), so we can use Node js to create that services.   
+
+
 
 
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/cyc.png)
 
-# The top-level structure of the program:
- Home Page
 
-1 Administrator
 
-      1.1 Manage Jobs
-
-       1.2 Manage Searchers
-
-       1.3 Manage Providers
-2 Provider
-
-     2.1 Add New Jobs
-
-     2.2   Add Jobs' Skills
-
-     2.3   Profile
-
-     2.4 See Searcher
-
-3 Searcher
-
-    3.1 Add New Skills 
-    3.2 Profile
-    3.3 See Jobs
-I will use Node js as Back-end, Html, CSS, JavaScript as front-end and MongoDB to Handle data
 
 
 #  Deploy in PaaS
