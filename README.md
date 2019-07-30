@@ -23,7 +23,7 @@ The system is formed by an architecture based on [microservices](https://en.wiki
 
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/Arc.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/arct.png)
 
 
 
