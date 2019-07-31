@@ -1,4 +1,4 @@
-﻿
+
 
 [![Build Status](https://travis-ci.org/AbdullahTaher93/CCMYproject.svg?branch=master)](https://travis-ci.org/AbdullahTaher93/CCMYproject)
 
@@ -6,11 +6,11 @@
 # Description
 
 
-We know there are many persons are looking for a job and they face difficult to find a job  What they want,Conversely There are many companies’ managers are looking for a suitable person For working in their companies,for that my idea provides a RESTful WebService which will provide a special relationship between companies and people The objective is creating Employment App which will allow them to Browse, search, get the chance to work, and select the suitable works. For example: If someone wants looking for a job just he will search via our App,Then the search results will depend on his skills that were previously stored in his profile.
+We know there are many people are looking for a job and They have difficulty finding a job what they want,Conversely There are many companies’ managers are looking for a suitable person to work in their companies,for that my idea provides a RESTful WebService which will provide a special relationship between companies and people, The objective is creating Employment APP that allows them to browse, search and get a chance to work, and select a suitable work. For example: If someone wants looking for a job just he will search via our App,Then The search results will match to his skills which stored in the his profile previously.
 
 # Architecture
 
-The system is formed by an architecture based on [microservices](https://en.wikipedia.org/wiki/Microservices). It has a cloud service in which the data is stored, the database system will be a NoSql database in (MongoDB), Our system has a Login/signup for users,From this the users can also view all data that stored in DB on the cloud, they can add, edit or delete featuers(skills) to/from their profiles, The system also has a REST API which can be used through a web page to do requesting (Get, post, Put, and delete), so we can use Node js to create that services, development of microservices the following :
+We will create the system by an architecture based on [microservices](https://en.wikipedia.org/wiki/Microservices). It has a cloud service in which the data is stored, the database system will be a NoSql database in (MongoDB), Our system has a Login/signup for users,From this the users can also view all data that stored in DB on the cloud, they can add, edit or delete featuers(skills) to/from their profiles, The system also has a REST API which can be using through a web page to do requesting (Get, post, Put, and delete), so we can use Node js to create that services, development of microservices the following :
 
 * Microservice: User management (Sign up, log in, user profile modification ...).
 
