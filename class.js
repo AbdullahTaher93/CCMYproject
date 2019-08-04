@@ -10,6 +10,8 @@ var url = "mongodb://localhost:27017/";
 
 size=0;
 var savedata=[];
+var jsonreturn=[];
+
 var namesfilter=[];
 var data = {
     name:'',
@@ -193,12 +195,21 @@ function search1(age){
 
 //print all fprofiles in Console.....
   function print(){
+   
     savedata.forEach(function(item, index) {
       console.log('['+(index+1)+'] '+item.name+' '+item.age+'  '+item.sex+'  '+item.email+'  '+item.phonenumber+'  '+item.skills+'  '+item.study);
-    });
+      
+      jsonreturn.push({"ID":(index+1),"name":item.name,"Age":item.age,"sex":item.sex,"email":item.email,"phonenumber":item.phonenumber,"skills":item.skills,"Study":item.study});
+    }
+    
+    );
+  
 
   }
 
 
-module.exports={storeData,savedata,print,editdata,deletdata,search,namesfilter,size};
+
+  module.exports={storeData,savedata,print,editdata,deletdata,search,namesfilter,size,jsonreturn};
+
+
 

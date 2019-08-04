@@ -30,13 +30,20 @@ We will create the system by an architecture based on [microservices](https://en
 
 
 
-#  Deploy in PaaS
+#  Deployment
 
-We have chosen as temporary PasS for the deployment of our application, Heroku: This PasS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
+There are different PaaS deployment services to deploy our application, For that we select [Heroku](https://en.wikipedia.org/wiki/Heroku): This PasS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
 
-Travis has been used As an integration service . The reason for using it is:easy to use. It is enough to include a file .travis.yml. To use it you have to connect it with the github account.
+[Travis](https://en.wikipedia.org/wiki/Travis_CI) has been used As an integration service.
 
-All the information regarding this section and the microservice developed is in
+ The reasons of use it are :
+* easy to use. 
+
+* It is enough to include a file .travis.yml. 
+
+To use it you have to connect it with the github account.
+
+All information regarding of this section and the microservice developed are in
 [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito2.md)
 
 Despliegue: https://small-well-service.herokuapp.com/

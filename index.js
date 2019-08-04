@@ -33,7 +33,7 @@ MongoClient.connect(url, (err, client) => {
     var bodyParser=require('body-parser');
 
     
-    var port = process.env.PORT || 3000;
+    var port = process.env.PORT || 5000;
 
     var savedata=require("./class");
     app.set('port', port);
@@ -61,8 +61,8 @@ MongoClient.connect(url, (err, client) => {
     app.get('/api',(req,res)=>{
      
       savedata.print();
-             
-      res.status(200).send("it printed on console");
+      
+      res.status(200).send(savedata.jsonreturn);
        });
 
        app.get('/api/search',(req,res)=>{
