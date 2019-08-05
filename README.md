@@ -32,9 +32,9 @@ We will create the system by an architecture based on [microservices](https://en
 
 #  Deployment
 
-There are different PaaS deployment services to deploy our application, For that we select [Heroku](https://en.wikipedia.org/wiki/Heroku): This PasS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
+There are different PaaS deployment services to deploy our application, For that we select Heroku: This PasS has been chosen because it is simple to use and allows to deploy any application from a Github repository.
 
-[Travis](https://en.wikipedia.org/wiki/Travis_CI) has been used As an integration service.
+Travis has been used As an integration service.
 
  The reasons of use it are :
 * easy to use. 
