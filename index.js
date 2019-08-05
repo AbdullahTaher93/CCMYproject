@@ -48,7 +48,7 @@ MongoClient.connect(url, (err, client) => {
       var msg = {
              "status": "OK",
              "ejemplo": {
-                "ruta": "/issue/foo",
+                "ruta": "/api/id",
                             "valor": { "msg" : "Abdullah Form Spain" }
                }
            }
