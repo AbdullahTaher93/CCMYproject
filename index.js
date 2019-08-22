@@ -12,7 +12,16 @@ MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here 
         db.close();   //closed method has also been moved to client obj
     
 });
+MongoClient.connect(url, (err, client) => {	
+  if (err) {	
+    console.error(err)	
 
+     return	
+  }	
+  var dbase = client.db("persons");	
+  const collection = dbase.collection('profiles')	
+  //...	
+})
 });    
     
       

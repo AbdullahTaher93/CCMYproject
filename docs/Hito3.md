@@ -23,17 +23,17 @@
  9. Click the Create button to create and start the instance.
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV1.jpg)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/VM1.jpg)
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV2.jpg)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/VM2.jpg)
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV3.jpg)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/VM3.jpg)
 
 
 Now we can start with our server by using SSH.
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV4.jpg)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/VM4.jpg)
 
 
 
