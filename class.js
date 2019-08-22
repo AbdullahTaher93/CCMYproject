@@ -1,13 +1,6 @@
 //using mongodb
 var MongoClient=require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/";
-
-
-
-
-
-
-
 size=0;
 var savedata=[];
 var jsonreturn=[];

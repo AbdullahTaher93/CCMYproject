@@ -2,19 +2,6 @@
 var express=require("express");
 var MongoClient=require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/";
-/*MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
-    if (err) throw err;
-    console.log("db has created");
-    var dbase = db.db("persons"); //here
-    dbase.createCollection("profiles", { useNewUrlParser: true },function(err, res) {
-        if (err) throw err;
-        console.log("Collection created!");
-        db.close();   //closed method has also been moved to client obj
-    
-});
-
-});    */
-
 MongoClient.connect(url, (err, client) => {	
   if (err) {	
     console.error(err)	
@@ -99,13 +86,7 @@ MongoClient.connect(url, (err, client) => {
                  
                 
                  });
-            
-     
 
-
-
-
-  
   app.listen(port, function () {
 
     console.log('Example app listening on port 3000!');
