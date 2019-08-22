@@ -77,7 +77,7 @@ this file follows these steps:
 
 We launched the playbook and the result follows:
         
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ansible2.jpg)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ansible22.jpg)
 
 
 
