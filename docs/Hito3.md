@@ -98,7 +98,7 @@ We launched the playbook and the result follows:
 
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/sever.jpg)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/server.jpg)
 
 
 
