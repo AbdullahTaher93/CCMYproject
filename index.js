@@ -1,7 +1,7 @@
 //using mongodb
 var express=require("express");
 var MongoClient=require("mongodb").MongoClient;
-var url = "mongodb://localhost:27017/persons";
+var url = "mongodb://localhost:27017/";
 MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
     if (err) throw err;
     console.log("db has created");
