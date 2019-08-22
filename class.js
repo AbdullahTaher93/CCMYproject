@@ -1,6 +1,6 @@
 //using mongodb
 var MongoClient=require("mongodb").MongoClient;
-var url = "mongodb://localhost:27017/persons";
+var url = "mongodb://localhost:27017/";
 
 
 
@@ -92,7 +92,8 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
       if (err) throw err;
       
       var dbase = db.db("persons"); //here
-      var json={
+      var json;
+       json={
             ID:size,
             name:name,
             age:age,
@@ -125,7 +126,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
 //delete a profile
 function deletdata(index){
   
-  /*MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
+  MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
     if (err) throw err;
     
     var dbase = db.db("persons"); //here
@@ -139,7 +140,7 @@ function deletdata(index){
         console.log("profile deleted!");
         db.close();   //close method has also been moved to client obj
     });
-});*/
+});
 
 
 var items=savedata.splice(index,1);
