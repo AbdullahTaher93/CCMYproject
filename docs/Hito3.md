@@ -2,39 +2,64 @@
 
 # Milestone 3 Document
 
-   In this Milestone ,The application has been deployed on Azure in a virtual machine with Ubuntu Server 18.04.
+   In this Milestone ,The application has been deployed on Google Cloud Platform [GCP](https://cloud.google.com/gcp/) in a virtual machine with Ubuntu Server 18.04.I selected Linux os,because Linux supports almost all of the major programming languages (Python, C/C++, Java, Perl, Ruby, etc.). Moreover, it offers a vast range of applications useful for programming purposes.we can find many libraries developed natively for Linux, The [package manager](https://en.wikipedia.org/wiki/Package_manager) on Linux helps us get things done easily.Interestingly, the ability of bash scripting is also one of the most compelling reasons why we prefer using Linux OS.Linux also brings in native support for Secure Shell [SSH](https://en.wikipedia.org/wiki/Secure_Shell), which would help us manage our servers quickly. we could include things like apt-get commands which further makes Linux one of the most popular choices of the programmers.
 
-   ## Creating a Virtual machine
-
-   its configuration:
    
-   1. OS: Ubuntu Server 18.04 
-   2. Region: France Central.
-   3. Authentication:password.
-   4. user : AbdullahTaher
-   5. Ip address: static
-   6. Open ports: SSH (22) and HTTP (80).
+
+   ## Creating a VM instance 
+       
+ * note I used the google cloud platform [document](https://cloud.google.com/compute/docs/instances/create-start-instance) to create and start a VM instance.
+
+ So, we can follow these instruction to create a VM instance :
+
+ 1. Go to the VM instances [page](https://console.cloud.google.com/compute/instances?_ga=2.239529539.-1964402234.1558025525).
+ 2. Select our project and click Continue.
+ 3. Click the Create instance button.
+ 4. Specify a Name for our instance.(I have written 'abdullah')
+ 5. Optionally, change the Zone for this instance. The list of zones is randomized within each region to encourage use across multiple zones.
+ 6. Machine type :  I selected n1-standard1 with 1 vCPU and 3.75 Memory,they are normal not so high and not so low.
+ 7. Select our operating system, so, I selected Ubuntu 18.04 LTS.
+ 8. To permit HTTP,select Allow HTTP traffic that allows all incoming traffic on tcp:80 (HTTP), and SSH tcp:22 has opened by default.
+ 9. Click the Create button to create and start the instance.
+
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV1.jpg)
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV2.jpg)
+
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV3.jpg)
+
+
+Now we can start with our server by using SSH.
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/MV4.jpg)
+
+
+
     
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/VM1.png)
 
-   ## Ansible
 
-To use it, we need to install it previously. Then we need to edit a file called ansible_hosts and it is located in the / etc / ansible / hosts directory. This file edited with the following:
+ ## Ansible
 
-     [Azure]
-       Ip Address Ansible_user=AbdullahTaher Ansible_ssh_pass=Mypass
+   To use it, we need to install it previously. Then we need to edit a file called hosts and it is located in the /etc/ansible/ directory. This file edited with the following:
 
-we are indicating that my IP is in the azure group and has a user named AbdullahTaher and password 'Mypassword' . Now running the following command we can ping our machine : 
+     [GoolgeCloud]
+       Ip Address ansible_user=ahmedtaher641aa
+
+we are indicating to IP of  our Virtual machine of  in the google cloud platform with its username. 
+
+Now, we can ping our machine by using : 
    
-         Ansible all -m ping --ask-pass 
+         ansible all -m ping --ask-pass 
 
 
 And the result follows:
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ansible.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ansible1.jpg)
 
 
-Now we will proceed to perform the provisioning task to deploy our application.
+Now, we will run the provisioning tasks to deploy your application.
 
 The provisioning file is located in the provision directory with the name [playbook.yml](https://github.com/AbdullahTaher93/CCMYproject/blob/master/provision/playbook.yml)
 
@@ -48,11 +73,11 @@ this file follows these steps:
 * Install dependencies.
 * Install pm2
 * Remove, if it exists, a previous pm2 process
-* Execute the application.
 
-We launched the playbook and the result is as follows:
+
+We launched the playbook and the result follows:
         
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ansible1.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ansible2.jpg)
 
 
 
@@ -64,16 +89,16 @@ We launched the playbook and the result is as follows:
 
    ## Run our App
   
- we can run our application on the VM with a command :
+ finally, We can run our application on the VM in the Port 80 with a command :
         
-         sudo port=80 npm start
+         sudo PORT=80 npm start
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/port80.png)
-
-The result following:    http://40.89.158.72/
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/runserver.jpg)
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/sever.png)
+
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/sever.jpg)
 
 
 

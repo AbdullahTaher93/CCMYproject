@@ -1,6 +1,6 @@
 //using mongodb
 var MongoClient=require("mongodb").MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://localhost:27017/persons";
 
 
 
@@ -92,11 +92,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
       if (err) throw err;
       
       var dbase = db.db("persons"); //here
-      var json;
-      
-        
-        
-           json={
+      var json={
             ID:size,
             name:name,
             age:age,
@@ -105,13 +101,11 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
             phonenumber:phonenumber,
             skills:skills,
             study:study
-            
-
-          };
-     
+                };
+      console.log("db has created");
       dbase.collection("profiles").insertOne(json,function(err, res){
           if (err) throw err;
-          console.log("profile created!");
+          console.log("profile created!"+json.name);
           db.close();   //close method has also been moved to client obj
       });
   });

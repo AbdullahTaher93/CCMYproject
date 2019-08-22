@@ -32,6 +32,4 @@
       command: pm2 delete PR
       ignore_errors: yes
     
-    - name: Arrancar pm2
-      command: pm2 start {{ project_path }}/index.js --name PR
     
