@@ -2,7 +2,13 @@
 
 # Milestone 3 Document
 
-   In this Milestone ,The application has been deployed on Google Cloud Platform [GCP](https://cloud.google.com/gcp/) in a virtual machine with Ubuntu Server 18.04.I selected Linux os,because Linux supports almost all of the major programming languages (Python, C/C++, Java, Perl, Ruby, etc.). Moreover, it offers a vast range of applications useful for programming purposes.we can find many libraries developed natively for Linux, The [package manager](https://en.wikipedia.org/wiki/Package_manager) on Linux helps us get things done easily.Interestingly, the ability of bash scripting is also one of the most compelling reasons why we prefer using Linux OS.Linux also brings in native support for Secure Shell [SSH](https://en.wikipedia.org/wiki/Secure_Shell), which would help us manage our servers quickly. we could include things like apt-get commands which further makes Linux one of the most popular choices of the programmers.
+   In this Milestone ,The application has been deployed in Google Cloud Platform [GCP](https://cloud.google.com/gcp/), We know there are many LaaS providers such as  Amazon AWS, Microsoft Azure, Google Compute Engine and IBM SmartCloud Enterprise.... etc, we can see the [features]() of each one, So after reading its features I decided using Microsoft Azure but I don't have any credits to use it and I have iready used my free account, so, i decided to use google cloud platform as a Iaas provider,
+   
+   
+   For that, The app will deploy in a virtual machine in Google Cloud Platform with Ubuntu Server 18.04.I selected Linux OS,because Linux supports almost all of the major programming languages (Python, C/C++, Java, Perl, Ruby, etc.). Moreover, it offers a vast range of applications useful for programming purposes.we can find many libraries developed natively for Linux, The [package manager](https://en.wikipedia.org/wiki/Package_manager) on Linux helps us get things done easily.Interestingly, the ability of bash scripting is also one of the most compelling reasons why we prefer using Linux OS.Linux also brings in native support for Secure Shell [SSH](https://en.wikipedia.org/wiki/Secure_Shell), which would help us manage our servers quickly. we could include things like apt-get commands which further makes Linux one of the most popular choices of the programmers.
+
+
+
 
    
 
