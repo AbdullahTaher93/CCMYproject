@@ -1,6 +1,6 @@
 
 
-# Milestone 3 Document
+# Milestone3 Document
 
    In this Milestone ,The application has been deployed in Google Cloud Platform [GCP](https://cloud.google.com/gcp/), We know there are many LaaS providers such as  Amazon AWS, Microsoft Azure, Google Compute Engine and IBM SmartCloud Enterprise.... etc, we can see the [features]() of each one, So after reading its features I decided using Microsoft Azure but I don't have any credits to use it and I have iready used my free account, so, i decided to use google cloud platform as a Iaas provider.
    
