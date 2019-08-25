@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  user: AbdullahTaher
+  user: ahmedtaher641aa
  
   vars:
     project_path: /home/project/CCMYproject
