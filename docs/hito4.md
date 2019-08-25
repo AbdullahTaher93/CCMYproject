@@ -151,7 +151,7 @@ We can find specific [images](https://docs.microsoft.com/en-us/azure/virtual-mac
 
 
 
-Finally, now we can deploy our project on the new our virtual machine so we can do that in a same way as in the [previous milestone](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito3.md),we have to [Install](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04) Ansible on Ubuntu 18.4 LTS, now we can ping our machine after edit hosts file with ansible_host, ansible_user that it is located in the   
+Finally, now we can deploy our project on the new our virtual machine so we can do that in a same way as in the [previous milestone](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito3.md), so, we have to [Install](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04) Ansible on Ubuntu 18.4 LTS, then we can ping our VM after edit hosts file with ansible_host and ansible_user that file is located in the   
 --/etc/ansible/hosts-- and the result will be:
 
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/testwithansible1.jpg)
@@ -194,9 +194,9 @@ Module service: manage services
 
 
 
-### Check the App 
+### Checking App 
 
-To check App if it is working correctly, its IP accessed through the browser http://35.246.115.186/
+To check our App, if it is working correctly, its IP accessed through the browser http://35.246.115.186/
 
   and the result will be:
 
