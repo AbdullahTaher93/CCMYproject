@@ -62,7 +62,7 @@ MV: 35.239.60.75
 
 # Gathering
 
-In this part we will create a virtual machine by command line using Cloud shell of google cloud platform, we will deploy our application on Google Cloud platform in a virtual machine with Ubuntu Server 18.04, and we have added Mongodb to our app, and new class Which allows clients add new jobs.
+In this part we will create a virtual machine by command line using Cloud shell of google cloud platform, we will deploy our application on Google Cloud platform in a virtual machine with Ubuntu Server 18.04LTS, and we have added Mongodb to our app, and a new function Which allows clients which allows clients login to our app.
 
 All information about this milestone in [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito4.md)
 

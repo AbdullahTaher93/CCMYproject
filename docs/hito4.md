@@ -1,12 +1,12 @@
 # Milestone 4
 
 
-In this part we will create a VM by using the [Azure](https://Azure.microsoft.com) CLI tool, then we will deploye our app on Azure in a virtual machine with [Debian 9](https://www.debian.org/intro/why_debian), and we will add Mongodb into our app, and we will create a new class 
+In this part we will create a VM by using [Google Cloud Shell](https://cloud.google.com/shell/docs/), then we will deploye our app on Google Compute Engine in a virtual machine with Ubuntu Server 18.4 LTS, and we will add Mongodb into our app, and we will create a new function which allows clients login to our app. 
 
 
 #### In this part we are going to use Mongodb in Our App..
 
-We have to do somethings for using Mongodb : 
+We have to do somethings to start using Mongodb:
 
   First: we need to connect our app with Mongodb, but before that we should install mongodb with this line:
 
@@ -36,6 +36,39 @@ Second: we used 3 method for dealing with mongodb
 
         query={ID:index};
         db.collection("profiles").find().sort(query).toArray()
+
+#### Also, In this part we are going to create new method to users login ..
+
+
+* The first thing I have to do it is add **PASSWORD** feature to user profile
+
+so, the profile feature has been :
+
+* names
+* ages
+* skills
+* study (Bachelor, Master,PhD ......)
+* Phones numbers
+* emails
+* status (Single or not)
+* **PASSWORD** new feature 
+
+Now, I have to create The login function, this function has two parameter *user email* and *user password*, and it returns json, if a user is exist or not.
+
+So, I added a new method to our **REST API** 
+
+ The following:
+    
+         GET on "/api/log": Return the login status 'exist' || 'notexist'
+
+
+Now,We can try to login with correct email and password, the result will be :
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/logincase1.jpg)
+
+And let us try with incorrect data, So, the result will be :
+
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/logincase2.jpg)
 
 
 ## Now we are going to create a new VM by using command line to deploy our App
@@ -89,7 +122,7 @@ And we used :
 
 
 
-After running the commands of create instance the result will be: 
+After running the commands of creating instance the result will be: 
 
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/createVM.jpg)
 

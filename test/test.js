@@ -1,7 +1,7 @@
 var request = require('supertest');
 var app=require("../index.js");
 var alldata=require("../class.js");
-var result=require("../jobs.js");
+
 const assert = require('assert');
 
 //API REST test

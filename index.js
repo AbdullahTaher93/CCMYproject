@@ -24,7 +24,7 @@ MongoClient.connect(url, (err, client) => {
     var port = process.env.PORT || 5000;
 
     var savedata=require("./class");
-    var login=require("./jobs");
+    
     app.set('port', port);
     app.use(express.static(__dirname + '/public'));
     
