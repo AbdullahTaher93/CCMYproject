@@ -24,7 +24,7 @@
  3. Click the Create instance button.
  4. Specify a Name for our instance.(I have written 'abdullah')
  5. Optionally, change the Zone for this instance. The list of zones is randomized within each region to encourage use across multiple zones.
- 6. Machine type :  I selected n1-standard1 with 1 vCPU and 3.75 Memory,they are normal not so high and not so low.
+ 6. Machine type :  I selected n1-standard1 with 1 vCPU and 3.75 Memory,it's normal not so high and not so low.
  7. Select our operating system, so, I selected Ubuntu 18.04 LTS.
  8. To permit HTTP,select Allow HTTP traffic that allows all incoming traffic on tcp:80 (HTTP), and SSH tcp:22 has opened by default.
  9. Click the Create button to create and start the instance.

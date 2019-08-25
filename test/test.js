@@ -1,6 +1,7 @@
 var request = require('supertest');
 var app=require("../index.js");
 var alldata=require("../class.js");
+var result=require("../jobs.js");
 const assert = require('assert');
 
 //API REST test
@@ -31,7 +32,7 @@ describe( "API REST", function() {
 it('Post to /api', function(done){
     request(app)
       .post('/api')
-      .send("name=abdullah&age=25&sex=M&email=AbdullahTaher@correo.ugr.es&phonenumber=0063&skills=C1,C2,C3&study=A1")
+      .send("name=abdullah&age=25&sex=M&email=AbdullahTaher@correo.ugr.es&password=abc123&phonenumber=0063&skills=C1,C2,C3&study=A1")
       .expect(200);
       done();
   });
@@ -39,7 +40,7 @@ it('Post to /api', function(done){
   it('put to /api', function(done){
     request(app)
       .put('/api')
-      .send("index=0&name=ali&age=23&sex=M&email=AbdullahTaher@correo.ugr.es&phonenumber=0063&skills=C1,C2,C3&study=A1")
+      .send("index=0&name=ali&age=23&sex=M&email=AbdullahTaher@correo.ugr.es&password=abc123&phonenumber=0063&skills=C1,C2,C3&study=A1")
      .expect(200);
      done();
   });
@@ -72,6 +73,22 @@ it('Post to /api', function(done){
         done();
       });
   });
+
+
+//query 
+it('query to /api/log', function(done){
+  request(app)
+    .get('/api/log')
+    .send("AbdullahTaher@correo.ugr.es&password=abc123")
+    
+    
+    .expect(200)
+    .end(function(err, res) {
+      if (err) return done(err);
+      done();
+    });
+});
+
 });
 //==================== profile class test ====================
 
@@ -87,7 +104,7 @@ describe(' profile class test', function() {
 
 	it( 'add profile', function(done){
 
-		alldata.storeData(name='abdullah',age=25,sex='M',email='AbdullahTaher@correo.ugr.es',phonenumber=0063,skills='C1,C2,C3',study='A1');
+		alldata.storeData(name='abdullah',age=25,sex='M',email='AbdullahTaher@correo.ugr.es',password='abc123',phonenumber=0063,skills='C1,C2,C3',study='A1');
 		var result = alldata.savedata;
 		assert.equal(result.length,1);
 		assert.equal(result[0].name,"abdullah");
@@ -97,7 +114,7 @@ describe(' profile class test', function() {
   
   it( 'edit profile', function(done){
 
-		alldata.editdata(index=0,name='ali',age=25,sex='M',email='AbdullahTaher@correo.ugr.es',phonenumber=0063,skills='C1,C2,C3',study='A1');
+		alldata.editdata(index=0,name='ali',age=25,sex='M',email='AbdullahTaher@correo.ugr.es',password='abc123',phonenumber=0063,skills='C1,C2,C3',study='A1');
 		var result = alldata.savedata;
 		assert.equal(result.length,1);
 		assert.equal(result[0].name,"ali");
@@ -121,7 +138,6 @@ describe(' profile class test', function() {
 
 });
 
-  
 
 
 

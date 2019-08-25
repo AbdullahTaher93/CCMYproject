@@ -4,7 +4,7 @@ var url = "mongodb://localhost:27017/";
 size=0;
 var savedata=[];
 var jsonreturn=[];
-
+var result=[];
 var namesfilter=[];
 var data = {
     name:'',
@@ -14,6 +14,7 @@ var data = {
     email:'',
     phonenumber:0,
     sex:"",
+    password:'',
   
   
     setname: function(name) {
@@ -57,10 +58,16 @@ var data = {
       },
       setsex: function(sex){
         this.sex=sex;
+      },
+      getpass: function(){
+        return password;
+      },
+      setpass: function(password){
+        this.password=this.password;
       }
 }
 //insert new profile
-function storeData(name,age,sex,email,phonenumber,skills,study){
+function storeData(name,age,sex,email,password,phonenumber,skills,study){
     let clone = {};
     for (let key in data) {
       clone[key] = data[key];
@@ -74,6 +81,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
     clone.setphone(phonenumber);
     clone.setskills(skills);
     clone.setstudy(study);
+    clone.setstudy(password);
     
     
     
@@ -94,7 +102,8 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
             email:email,
             phonenumber:phonenumber,
             skills:skills,
-            study:study
+            study:study,
+            password:password
                 };
       console.log("db has created");
       dbase.collection("profiles").insertOne(json,function(err, res){
@@ -107,7 +116,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
      
   }
   //edit a profile
-  function editdata(index,name,age,sex,email,phonenumber,skills,study){
+  function editdata(index,name,age,sex,email,password,phonenumber,skills,study){
     savedata[index].setname(name);
     savedata[index].setage(age);
     savedata[index].setsex(sex);
@@ -115,6 +124,7 @@ function storeData(name,age,sex,email,phonenumber,skills,study){
     savedata[index].setphone(phonenumber);
     savedata[index].setskills(skills);
     savedata[index].setstudy(study);
+    savedata[index].setstudy(password);
   }
 //delete a profile
 function deletdata(index){
@@ -158,36 +168,47 @@ var si=0;
 }
 
 
-function search1(age){
-
+function search1(email,password){
   MongoClient.connect(url, { useNewUrlParser: true },function(err, db) {   //here db is the client obj
+    
     if (err) throw err;
- 
     var dbase = db.db("persons"); //here
     
     
-      var query={age:age};
+      var query={email:email,password:password};
       
         
-    dbase.collection("profiles").find().sort(query).toArray(function(err, res){
+    dbase.collection("profiles").find(query).toArray(function(err, res){
+      
         if (err) throw err;
+        {
         console.log(" searching!");
+        
+        if(res[0] == undefined)
+        result[0]={'login_case':'notexist'};
+       
+        else
+        result[0]={"login_case":"exist"};
+  
+        }
+       
         db.close();   //close method has also been moved to client obj
     });
 });
-  
-  
-  
-  }
+
+
+//return result;
+}
+
   
 
 //print all fprofiles in Console.....
   function print(){
    
     savedata.forEach(function(item, index) {
-      console.log('['+(index+1)+'] '+item.name+' '+item.age+'  '+item.sex+'  '+item.email+'  '+item.phonenumber+'  '+item.skills+'  '+item.study);
+      console.log('['+(index+1)+'] '+item.name+' '+item.age+'  '+item.sex+'  '+item.email+'  '+item.password+'  '+item.phonenumber+'  '+item.skills+'  '+item.study);
       
-      jsonreturn.push({"ID":(index+1),"name":item.name,"Age":item.age,"sex":item.sex,"email":item.email,"phonenumber":item.phonenumber,"skills":item.skills,"Study":item.study});
+      jsonreturn.push({"ID":(index+1),"name":item.name,"Age":item.age,"sex":item.sex,"email":item.email,"password":item.password,"phonenumber":item.phonenumber,"skills":item.skills,"Study":item.study});
     }
     
     );
@@ -197,7 +218,7 @@ function search1(age){
 
 
 
-  module.exports={storeData,savedata,print,editdata,deletdata,search,namesfilter,size,jsonreturn};
+  module.exports={storeData,savedata,print,editdata,deletdata,search,namesfilter,size,jsonreturn,search1,result};
 
 
 

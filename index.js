@@ -24,6 +24,7 @@ MongoClient.connect(url, (err, client) => {
     var port = process.env.PORT || 5000;
 
     var savedata=require("./class");
+    var login=require("./jobs");
     app.set('port', port);
     app.use(express.static(__dirname + '/public'));
     
@@ -56,23 +57,33 @@ MongoClient.connect(url, (err, client) => {
           res.status(200).send('The name of these age are printed in console');
            
            });
+
+
+
+       app.get('/api/log',(req,res)=>{
+       
+        savedata.search1(req.body.email,req.body.password);
+       
+        res.status(200).send(savedata.result[0]);
+         
+         });
     
 
     
 
          app.post('/api',(req,res)=>{
       
-            savedata.storeData(req.body.name,req.body.age,req.body.sex,req.body.email,req.body.phonenumber,req.body.skills,req.body.study);
+            savedata.storeData(req.body.name,req.body.age,req.body.sex,req.body.email,req.body.password,req.body.phonenumber,req.body.skills,req.body.study);
            
-            res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
+            res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.password+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
              
              });
 
           app.put('/api',(req,res)=>{
              
-              savedata.editdata(req.body.index,req.body.name,req.body.age,req.body.sex,req.body.email,req.body.phonenumber,req.body.skills,req.body.study);
+              savedata.editdata(req.body.index,req.body.name,req.body.age,req.body.sex,req.body.email,req.body.password,req.body.phonenumber,req.body.skills,req.body.study);
            
-              res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
+              res.status(200).send(req.body.name+' '+req.body.age+' '+req.body.sex+' '+req.body.email+' '+req.body.password+' '+req.body.phonenumber+' '+req.body.skills+' '+req.body.study);
                
                
                });

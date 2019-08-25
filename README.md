@@ -62,8 +62,9 @@ MV: 35.239.60.75
 
 # Gathering
 
-In this part we will create virtual machine by command line using the Azure CLI tool, The we will deploy our application on Azure in a virtual machine with Debian 9  as os, and we used Mongodb in our app 
-All the information about this milestone[This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito4.md)
+In this part we will create a virtual machine by command line using Cloud shell of google cloud platform, we will deploy our application on Google Cloud platform in a virtual machine with Ubuntu Server 18.04, and we have added Mongodb to our app, and new class Which allows clients add new jobs.
+
+All information about this milestone in [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito4.md)
 
 
 MV2: 52.143.152.163
