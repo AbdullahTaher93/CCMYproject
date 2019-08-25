@@ -62,12 +62,12 @@ MV: 35.239.60.75
 
 # Gathering
 
-In this part we will create a virtual machine by command line using Cloud shell of google cloud platform, we will deploy our application on Google Cloud platform in a virtual machine with Ubuntu Server 18.04LTS, and we have added Mongodb to our app, and a new function Which allows clients which allows clients login to our app.
+In this part we will create a virtual machine by command line using Cloud shell of google cloud platform, we will deploy our application on Google Cloud platform in a virtual machine with Ubuntu Server 18.04LTS, and we will add Mongodb to our app, and we will create a new function which allows clients login to our app.
 
 All information about this milestone in [This Document](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/hito4.md)
 
 
-MV2: 52.143.152.163
+MV2: 35.246.115.186
 
 
 

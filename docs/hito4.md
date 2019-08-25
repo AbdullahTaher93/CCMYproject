@@ -140,24 +140,50 @@ its configuration:
 
 ## Why ubuntu?!
 
-As I said in the document of milestone3  
+As I said in the document of milestone 3, ubuntu has a lot of nice features which make us choose ubuntu, in additional,there are many differences between debian, ubuntu and windows we can see that in this [website](https://linuxconfig.org/debian-vs-ubuntu) which describes the difference between Debian and ubuntu, and this [website](https://www.techulator.com/experts/3039-Fundamental-differences-between-Ubuntu-and-Windows.aspx) describes the difference between Windows and ubuntu, for that we have used Linux.
 
 
-We can find specific [images](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/cli-ps-findimage) of Debian,To find a specific VM image in the Marketplace we can use this line:
+We can find specific [images](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/cli-ps-findimage) of ubuntu,To find a specific VM image in the Marketplace we can use this line:
 
-             az vm image list --offer Debian --all --output table 
+             gcloud compute images list
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/showVMofDebian.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/ubuntuimage.jpg)
 
 
-### Start with Ubuntu
-
-  ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/runde.png)
 
 Finally, now we can deploy our project on the new our virtual machine so we can do that in a same way as in the [previous milestone](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/Hito3.md),we have to [Install](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04) Ansible on Ubuntu 18.4 LTS, now we can ping our machine after edit hosts file with ansible_host, ansible_user that it is located in the   
 --/etc/ansible/hosts-- and the result will be:
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/testwithansible.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/testwithansible1.jpg)
+
+
+And we have to add a new task to our [playbook](https://github.com/AbdullahTaher93/CCMYproject/blob/master/provision/playbook.yml) file to install mongodb and start it, I followed this [document](https://cloudmesh.github.io/classes/lesson/devops/ansible/ansible-appendix.html) to do it, SO, the adding will be :
+
+Module apt_key: add repository keys:
+                
+    tasks:
+    - name: Import the public key used by the package management system
+                    apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=7F0CEB10 state=present
+
+
+Module apt_repository: add repositories
+
+         - name: Add MongoDB repository
+      apt_repository: repo='deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' state=present
+
+Module apt: install packages
+
+         - name: install mongodb
+           apt: pkg=mongodb-org state=latest update_cache=yes
+           notify:
+              - start mongodb
+
+Module service: manage services
+
+          handlers:
+           - name: start mongodb
+             service: name=mongod state=started
+
 
 
 
@@ -170,13 +196,13 @@ Finally, now we can deploy our project on the new our virtual machine so we can 
 
 ### Check the App 
 
-To check App if it is working correctly, its IP accessed through the browser http://52.143.152.163/
+To check App if it is working correctly, its IP accessed through the browser http://35.246.115.186/
 
   and the result will be:
 
 
 
-![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/IPVM2.png)
+![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/VMIP2.jpg)
 
 
 
