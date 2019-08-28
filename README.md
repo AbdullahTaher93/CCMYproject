@@ -7,6 +7,7 @@
 
 
 We know there are many people are looking for a job and They have difficulty finding a job what they want,Conversely There are many companies’ managers are looking for a suitable person to work in their companies,for that my idea provides a RESTful WebService which will provide a relationship between companies and people, The objective is creating Employment APP that allows them to browse, search and get a chance to work, and select a suitable job. 
+
 an example: If someone wants looking for a job the first thing he has to do it is creating an account with his email then configures his profile with his (name,skills ,phone number.....etc) that profile represents a simple C.V for him, so when he wants searching about a job the searches results will match to his skills which stored in his profile previously.
 
 # Architecture
