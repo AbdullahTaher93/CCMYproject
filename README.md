@@ -23,7 +23,7 @@ We will create the system by an architecture based on [microservices](https://en
 * Microservice: display data in a certain way.
 
 
-![image](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg)
+
 
 ![Computación nube](https://github.com/AbdullahTaher93/CCMYproject/blob/master/docs/image/arct.png)
 
