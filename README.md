@@ -10,7 +10,7 @@ We know there are many people are looking for a job and They have difficulty fin
 
 an example: If someone wants looking for a job the first thing he has to do it is creating an account with his email then configures his profile with his (name,skills ,phone number.....etc) that profile represents a simple C.V for him, so when he wants searching about a job the searches results will match to his skills which stored in his profile previously.
 
-### Architecture
+# Architecture
 
 We will create the system by an architecture based on [microservices](https://en.wikipedia.org/wiki/Microservices). It has a cloud service in which the data is stored, the database system will be a NoSql database in (MongoDB), Our system has a Login/signup for users, from this, the users can also view all data that stored in DB on the cloud, they can add, edit or delete features (skills) to/from their profiles, The system also has a REST API which can be using through a web page to do requesting (Get, post, Put, and delete), so we can use Node js to create that services, development of microservices the following :
 
